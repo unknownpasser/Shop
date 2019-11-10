@@ -1,0 +1,13 @@
+POST http://localhost:3000/users/userhome
+content-type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1Y2Q2OTc4NGFmMTEzNzQzMDQwMDFkZTIiLCJpYXQiOjE1NTg1MzIyMDIsImV4cCI6MTU1OTEzNzAwMn0.l9Ba-TTo64xXJGTZlzWED5BxzTnCANhreD3WjJQN56c
+
+# {
+#     # "username": "123",
+#     # "password": "123"
+# }
+
+
+
+###
+GET http://localhost:3000/
