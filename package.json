@@ -10,7 +10,7 @@
     "axios": "^0.18.1",
     "better-scroll": "^1.15.2",
     "normalize.css": "^8.0.1",
-    "vant": "^1.6.24",
+    "vant": "^2.2.14",
     "vue": "^2.6.10",
     "vue-lazyload": "^1.2.6",
     "vue-router": "^3.0.6",
