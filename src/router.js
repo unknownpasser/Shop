@@ -9,6 +9,7 @@ const User = () => import(/* webpackChunkName: "components" */ './views/User.vue
 const Cart = () => import(/* webpackChunkName: "components" */ './views/Cart.vue')
 const Test = () => import(/* webpackChunkName: "components" */ './views/Test.vue')
 const Logon = () => import(/* webpackChunkName: "components" */ './views/Logon.vue')
+const Search = () => import(/* webpackChunkName: "components" */ './views/Search.vue')
 
 Vue.use(Router)
 
@@ -21,12 +22,12 @@ const router = new Router({
     },
     {
       path: '/detail',
-      naem: 'detail',
+      name: 'detail',
       component: Detail
     },
     {
       path: '/test',
-      naem: 'test',
+      name: 'test',
       component: Test
     },
     {
@@ -56,6 +57,11 @@ const router = new Router({
       component: Logon
     },
     {
+      path: "/search",
+      name: 'search',
+      component: Search
+    },
+    {
       path: "/user",
       name: 'user',
       component: User,
@@ -71,11 +77,6 @@ const router = new Router({
         requireAuth: true,
       },
     },
-    {
-      path: "/test",
-      name: 'test',
-      component: Test,
-    }
   ]
 });
 

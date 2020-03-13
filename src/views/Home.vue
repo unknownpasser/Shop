@@ -7,7 +7,7 @@
         size="1.5rem"
         color="#fff"
       />
-      <div class="header-search iconfont">&#xe69f;点击进行搜索</div>
+      <div class="header-search iconfont" @click="onSearch">&#xe69f;点击进行搜索</div>
       <van-icon
         name="user-o"
         class="user"
@@ -76,6 +76,9 @@ export default {
       }else{
         this.$router.push("/login");
       }
+    },
+    onSearch(){
+      this.$router.push("/search")
     }
   }
 };

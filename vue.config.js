@@ -43,6 +43,14 @@ module.exports = {
           '^/goods': ''
         }
       },
+      '/search': {
+        target: 'http://localhost:3000/search',
+        changeOrigin: true,
+        ws: true,
+        pathRewrite: {
+          '^/search': ''
+        }
+      },
       '/addresslist': {
         target: 'http://localhost:3000/addresslist',
         changeOrigin: true,

@@ -30,6 +30,13 @@ router.get('/goods', (req, res, next) => {
   })
 })
 
+router.get('/search', (req, res, next) => {
+  let keyword = req.query.keyword
+  Goods.find({ name: {$regex : keyword} }, { name: 1, imgurl: 1, price: 1, by: 1 }, (err, doc) => {
+    res.json(doc)
+  })
+})
+
 router.get('/navbars', (req, res, next) => {
   NavBars.find({}, {}, (err, doc) => {
     res.json(doc)

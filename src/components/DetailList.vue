@@ -115,8 +115,22 @@ export default {
   },
   methods: {
     ...mapMutations(["setNum"]),
-    onBuy(skuData) {
-      this.$toast.success("购买成功,物品Id:" + skuData.goodsId);
+    onBuy() {
+      if (this.token) {
+        this.$toast.success(
+          "购买成功,物品Id:" + this.$refs.sku.getSkuData().goodsId
+        );
+      } else {
+        this.$dialog
+          .confirm({
+            title: "提示",
+            message: "请登录"
+          })
+          .then(() => {
+            this.$router.replace("/login");
+          })
+          .catch(() => {});
+      }
     },
     addCart(skuData) {
       let newSkuData = {};
